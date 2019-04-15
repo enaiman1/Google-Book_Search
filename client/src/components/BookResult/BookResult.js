@@ -1,6 +1,7 @@
 import React from "react";
 import API from "../../utils/API";
 import {BrowserRouter as Router} from "react-router-dom";
+import "./BookResult.css";
 
 class BookResult extends React.Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class BookResult extends React.Component {
         this.handleDeleteClick = this.handleDeleteClick.bind(this);
     }
 
-    handlesaveClick = function(e) {
+    handleSaveClick = function(e) {
         this.setState({saved: true});
         const bookData = {
             title: this.props.title,
@@ -25,6 +26,10 @@ class BookResult extends React.Component {
         e.preventDefault();
         API.addBookToDB(bookData).then(
             (response) => {
+                console.log(response);
+            }
+        ).catch(
+            (err) => {
                 console.log(err);
             }
         );
@@ -44,6 +49,7 @@ class BookResult extends React.Component {
             }
         );
     }
+
     render() {
         return(
             <div className="bookResult" id={(this.props.id)? this.props.id: null} style={{display: this.state.deleted? "none" : "block"}}>
@@ -75,4 +81,5 @@ class BookResult extends React.Component {
         );
     }
 }
+
 export default BookResult;

@@ -1,0 +1,33 @@
+nav {
+  background: rgb(0,45,4); /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(0,45,4,1) 0%, rgba(41,178,0,1) 75%, rgba(0,110,46,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(0,45,4,1) 0%,rgba(41,178,0,1) 75%,rgba(0,110,46,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(0,45,4,1) 0%,rgba(41,178,0,1) 75%,rgba(0,110,46,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002d04', endColorstr='#006e2e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */  
+
+
+
+
+  padding: 1rem 0;
+}
+  
+  nav h2 {
+    display: inline;
+    margin: 0 2vw;
+    font-size: 1.25rem;
+    color: white;
+  }
+  
+  nav a {
+    margin: 0 2vw;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+  nav a:hover {
+    background-color: #33658A;
+    height: 100%;
+  }
+  nav a:visited {
+    color: rgb(228, 234, 238);
+  }

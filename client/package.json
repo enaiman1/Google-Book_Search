@@ -1,6 +1,7 @@
 {
   "name": "google_book_search",
   "version": "0.1.0",
+  "description": "Mern Demo",
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
