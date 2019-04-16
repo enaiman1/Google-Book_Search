@@ -1,8 +1,11 @@
+// dependencies
 require("dotenv").config();
 const axios = require("axios");
 const db = require("../models");
 const path = require("path");
 
+
+// connecting to books api
 module.exports = function(app) {
     app.get("/api/books", (req, res) => {
         db.Book.find().then(
@@ -16,6 +19,7 @@ module.exports = function(app) {
         );
     });
 
+// post request, connecting with google book search api, to send back the data for the books
     app.post("/search", (req, res) => {
         // set bookTitle to the req.body.title with spaces replaced with plus signs(+)
         let bookTitle = req.body.title.replace(/\s/g, "+");
@@ -32,6 +36,7 @@ module.exports = function(app) {
         );
     });
 
+    // post request to put returned book info into db, once uses wants to save that book
     app.post("/api/books", (req, res) => {
         db.Book.create(req.body).then(
             (response) => {
@@ -44,6 +49,7 @@ module.exports = function(app) {
         );
     });
 
+    // delete request to remove the saved book 
     app.delete("/api/books/:id", (req, res) => {
         db.Book.findByIdAndDelete(req.params.id).then(
             (response) => {

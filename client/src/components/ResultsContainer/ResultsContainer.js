@@ -3,10 +3,12 @@ import BookResult from "../BookResult";
 import "./ResultsContainer.css";
 
 function ResultsContainer(props) {
+    // if your in the main page it will show book search box, will eventual show result
     if(props.path === "/") {
         return(
             <div id="resultsContainer">
                 <h3>Results Found</h3>
+                {/* creates new array with the results recieved from google book search api */}
                 {props.bookData.map((book) => {
                     const bookInfo = book.volumeInfo;
                     return <BookResult
@@ -20,11 +22,13 @@ function ResultsContainer(props) {
                 })}
             </div>
         );
+        // if user is on saved paged the result will be show
     } else if(props.path === "/saved") {
         if(props.savedBooks.length > 0) {
             return(
                 <div id="resultsContainer">
                     <h3>Saved Books</h3>
+                    {/* creates new array to list books that have been saved  */}
                     {props.savedBooks.map((book) => {
                         return <BookResult
                         title={book.title}
@@ -38,6 +42,7 @@ function ResultsContainer(props) {
                     })}
                 </div>
             );
+            // if there are not saved books
         } else {
             return(
                  <div id="resultsContainer">

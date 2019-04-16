@@ -9,7 +9,7 @@ class Saved extends React.Component {
             savedBooks: []
         }
     }
-
+// upon intial load, the books that have already been saved will render to page
     componentWillMount() {
         API.getBooks().then(
             (response) => {

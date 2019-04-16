@@ -10,8 +10,8 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Header />
           <Nav />
+          <Header />
           <Switch>
             <Route exact path="/" component={Search}/>
             <Route path="/saved" component={Saved}/>

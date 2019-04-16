@@ -13,11 +13,13 @@ class Search extends React.Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
+    // function to handle user text imput
     handleChange(e) {
         e.preventDefault();
         this.setState({bookInput: e.target.value})
     }
 
+    // function to handle click event
     handleSearchClick(e) {
         e.preventDefault();
         API.searchBooks(this.state.bookInput)

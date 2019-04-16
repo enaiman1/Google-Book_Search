@@ -1,5 +1,7 @@
+//dependencies
 import axios from "axios";
 
+// exporting client side api to connect with server side api
 export default {
     getBooks: () => {
         return axios.get("/api/books");
