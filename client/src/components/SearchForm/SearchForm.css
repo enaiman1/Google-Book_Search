@@ -21,11 +21,12 @@ form {
     font-size: 1.25vw;
   }
 
-  form button {
-    position: absolute;
-    right: 0;
-  }  
+  
 
   label {
   font-size: 1.25rem;
 }
+
+/* :local(.jumbotron) {
+    
+} */
