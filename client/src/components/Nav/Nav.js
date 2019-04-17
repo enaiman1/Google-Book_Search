@@ -5,7 +5,8 @@ import "./Nav.css";
 function Nav() {
     return(
         <nav>
-            <h2>Google Books</h2>
+            <p>powered by</p>
+            <i class="fab fa-google fa-2x"></i>
             <Link to="/">Search</Link>
             <Link to="/saved">Saved</Link>
         </nav>

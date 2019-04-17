@@ -11,21 +11,25 @@ nav {
   padding: 1rem 0;
 }
   
-  nav h2 {
+  nav p {
     display: inline;
-    margin: 0 2vw;
-    font-size: 1.25rem;
-    color: white;
+    margin: 0 1vw;
+    font-size: 1rem;
+    color: #f4f4f4;
   }
   
+  nav i {
+    color: #f4f4f4;
+  }
   nav a {
     margin: 0 2vw;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: white;
     text-decoration: none;
+    float: right;
   }
   nav a:hover {
-    background-color: #33658A;
+    background-color: #2522dd;
     height: 100%;
   }
   nav a:visited {

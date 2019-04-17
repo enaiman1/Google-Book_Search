@@ -1,18 +1,19 @@
 button {
     border-radius: 0;
     border: none;
-    background-color: #4e4cd8;
+    background-color: #2522dd;
     color: white;
-    padding: .75vw;
-    font-size: 1.25vw;
+    padding: .5vw;
+    font-size: 2vw;
   }
   
   button[disabled] {
-    background-color: #f9e39f;
+    background-color: #afada7;
   }
 
   form button {
     position: relative;
+    margin-top: 2vw;
     right: 0;
   }  
   
